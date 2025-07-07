@@ -60,7 +60,7 @@ try:
     for row in rows:
         cols = row.select("td")
         if len(cols) >= 4:
-           # Extract course name (first <a> tag inside first column)
+           # Extract course name 
            course_name = cols[0].find("a").get_text(strip=True) if cols[0].find("a") else cols[0].get_text(strip=True)
 
            # Extract fees (just the amount + fee type)
